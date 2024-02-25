@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,11 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 // --- Basic Roating ---
 
-Route::get('/hello', function () {
-    return 'Hello World';
-});
+Route::get('hello', [WelcomeController::class, 'hello']);
+
+// Route::get('/hello', function () {
+//     return 'Hello World';
+// });
 
 Route::get('/world', function () {
     return 'World';
