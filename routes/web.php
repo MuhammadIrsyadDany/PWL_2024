@@ -147,12 +147,12 @@ Route::resource('photo', PhotoController::class)->only(['index', 'show']);
 Route::resource('photo', PhotoController::class)->except(['create', 'store', 'update', 'destroy']);
 
 
-// --- Rout View ---
+// --- Route View ---
 Route::get('/greeting', function () {
     return view('hello', ['name' => 'Irsyad']);
 });
 
-// --- Rout View Direktori ---
+// --- Route View Direktori ---
 Route::get('/greeting', function () {
     return view('blog.hello', ['name' => 'Dany']);
 });
